@@ -1,6 +1,5 @@
 # Batalha Naval
 
-<ul>
     <li>Adiciona 2 cruzadores: ✅<li>
     <li>Adiciona 3 submarinos: ✅<li>
     <li>Adiciona 1 porta-aviões: ✅<li>
@@ -12,4 +11,3 @@
     <li>Não pode registrar só um jogador e colocar para jogar: ✅<li>
     <li>2 tiros para cada jogador: ✅<li>
     <li>Números de navios que podem ser adicionados(6): ✅<li>
-<ul>
