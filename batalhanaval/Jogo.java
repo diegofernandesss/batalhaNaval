@@ -14,13 +14,17 @@ public class Jogo {
         
         
         while (i<=6) {
-            String tipo,linha = null;
+            String tipo = null,linha = null;
             int coluna = -1;
-        
+            
             campo.printCampo();
             
+            if(campo.cheio()){
+                    System.out.println("Já foram adcionados todos os navios");
+                    break;
+                }
+            
             while (true){
-                
                 System.out.println("Digite o tipo de navio que deseja adicionar: ");
                 tipo = s.next();
                 
@@ -60,7 +64,7 @@ public class Jogo {
             linhac = e.converter(linha);
 
             campo.adicionarArma(tipo, linhac-1, coluna-1);
-            if (campo.cheio()){
+            if (!campo.cheio()){
                 i++;
             }
             
@@ -191,3 +195,4 @@ public class Jogo {
         System.out.println("--------------------------------------------------------");
     }
 }
+

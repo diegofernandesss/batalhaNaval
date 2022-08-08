@@ -5,10 +5,12 @@ public class Campo {
     private int quantSub = 3;
     private int quantCruz = 2;
     private int quantPa = 1;
+    private final String[] linhas;
     private final Exception e = new Exception();
     
     public Campo(){
         this.campo = new char[8][8];
+        this.linhas = new String[8];
         for (char[] campo1 : campo) {
             for (int j = 0; j < campo1.length; j++) {
                 campo1[j] = ' ';
@@ -25,7 +27,7 @@ public class Campo {
     }
     
     public boolean cheio(){
-        return (this.quantCruz+this.quantPa+this.quantSub) !=0;
+        return (this.quantCruz+this.quantPa+this.quantSub) ==0;
     }
     
     public void setPosicao(int linha,int coluna,char valor){
@@ -35,12 +37,7 @@ public class Campo {
     
 
     
-
     public void adicionarArma(String tipo,int linha,int coluna){
-        
-        if(this.cheio()){
-            System.out.println("Já foram adcionados todos os navios");
-        }
         
         switch (tipo){
             case "submarino" -> {
@@ -125,4 +122,6 @@ public class Campo {
         
         return "Campo{" + '}';
     }
+    
+    
 }

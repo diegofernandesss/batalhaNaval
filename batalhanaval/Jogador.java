@@ -61,4 +61,6 @@ public class Jogador {
     public boolean venceu(){
         return cont==12;
     }
+    
+    
 }

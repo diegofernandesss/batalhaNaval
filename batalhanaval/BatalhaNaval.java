@@ -5,9 +5,10 @@ import java.util.Scanner;
 
 
 public class BatalhaNaval {
+    
+
     public static void main(String[] args) throws IOException {
         Scanner s = new Scanner(System.in);
-        Exception e = new Exception();
         Jogo jogo = new Jogo();
         Jogador jogador1 = null,jogador2 = null;
         
@@ -44,6 +45,10 @@ public class BatalhaNaval {
                         System.out.println("Opss!, voce não criou jogadores, não é possivel jogar!");
                         break;
                     }
+                    else if(jogador1.venceu() || jogador2.venceu()){
+                        System.out.println("");
+                        break;
+                }
                     jogo.Jogar(jogador1, jogador2);
                     
                     System.out.println("FIM DE JOGO!");
@@ -54,6 +59,5 @@ public class BatalhaNaval {
         
         
         }
-    
     }
 }
